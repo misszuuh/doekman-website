@@ -703,7 +703,7 @@ const HomePage = () => {
     <div className="footer-bottom">
       <div className="footer-bottom-content">
         <div className="copyright">
-          © 2025 Dockman Foundation. All rights reserved.
+          © 2025 Doekman Foundation. All rights reserved.
         </div>
         <div className="footer-legal">
           <a href="/privacy" className="legal-link">Privacy</a>
