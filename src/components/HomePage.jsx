@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom'; 
 import './HomePage.css';
+import Footer from './Footer';
+import Navbar from './Navbar'; 
 
 const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,57 +87,7 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
-      {/* Navbar */}
-      <nav className="navbar">
-        <div className="nav-container">
-          {/* Logo on the left */}
-          <div className="nav-logo">
-            <div className="logo-text">
-              <span className="logo-main">DOCKMAN</span>
-              <span className="logo-sub">FOUNDATION</span>
-            </div>
-          </div>
-
-          {/* Navigation links in center */}
-          <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-            <a 
-              href="#home" 
-              className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}
-              onClick={() => handleLinkClick('home')}
-            >
-              Home
-            </a>
-            <a 
-              href="#about" 
-              className={`nav-link ${activeLink === 'about' ? 'active' : ''}`}
-              onClick={() => handleLinkClick('about')}
-            >
-              About
-            </a>
-            <a 
-              href="#programs" 
-              className={`nav-link ${activeLink === 'programs' ? 'active' : ''}`}
-              onClick={() => handleLinkClick('programs')}
-            >
-              Programs
-            </a>
-          </div>
-
-          {/* Donate button on the right */}
-          <div className="nav-actions">
-            <button className="donate-btn">
-              Donate
-            </button>
-          </div>
-
-          {/* Mobile menu hamburger */}
-          <div className="nav-toggle" onClick={toggleMenu}>
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
-          </div>
-        </div>
-      </nav>
+     <Navbar />
 
       {/* Hero Section */}
       <section id="home" className="hero">
@@ -152,7 +105,9 @@ const HomePage = () => {
             <p className="hero-description">
               Creating awareness, breaking the stigma, and supporting young people through education and resources.
             </p>
-            <button className="hero-btn">Learn More</button>
+            <Link to="/about">
+              <button className="hero-btn">Learn More</button>
+            </Link>
           </div>
 
           {/* Right side - Orange card with image overlapping */}
@@ -339,7 +294,7 @@ const HomePage = () => {
 
 
  {/* Program Highlights Section */}
-<section className="program-highlights-section">
+      <section className="program-highlights-section">
   <div className="container">
     <div className="program-highlights-grid">
       {/* Left Side - Content */}
@@ -353,7 +308,9 @@ const HomePage = () => {
               generosity into direct support for neighbors in need. Every donation, every hour volunteered, 
               and every shared message helps create a safer, healthier, and more connected community.
             </p>
-            <button className="program-btn">Learn More About Programs</button>
+            <Link to="/programs">
+              <button className="program-btn">Learn More About Programs</button>
+            </Link>
           </div>
           <div className={`program-slide ${currentSlide === 1 ? 'active' : ''}`}>
             <h3 className="slide-title">EDUCATION</h3>
@@ -362,7 +319,9 @@ const HomePage = () => {
               We provide training and resources to schools and local organizations to break the stigma 
               and promote sustainable practices.
             </p>
-            <button className="program-btn">Learn More About Programs</button>
+            <Link to="/programs">
+              <button className="program-btn">Learn More About Programs</button>
+            </Link>
           </div>
           <div className={`program-slide ${currentSlide === 2 ? 'active' : ''}`}>
             <h3 className="slide-title">COMMUNITY SUPPORT</h3>
@@ -371,13 +330,15 @@ const HomePage = () => {
               Through partnerships and collaborative efforts, we ensure sustainable impact 
               and long-term change in underserved communities.
             </p>
-            <button className="program-btn">Learn More About Programs</button>
+            <Link to="/programs">
+              <button className="program-btn">Learn More About Programs</button>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Right Side - Image Carousel */}
-      <div className="program-carousel-side">
+        <div className="program-carousel-side">
         <div className="carousel-container">
           <div className="carousel-track" style={{ transform: `translateY(-${currentSlide * 100}%)` }}>
             <div className="carousel-slide">
@@ -425,13 +386,13 @@ const HomePage = () => {
           <button className="carousel-btn prev-btn" onClick={prevSlide}>↑</button>
           <button className="carousel-btn next-btn" onClick={nextSlide}>↓</button>
         </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 {/* News & Events Section */}
-<section className="news-events-section">
+      <section className="news-events-section">
   <div className="container">
     <div className="news-header">
       <h2 className="news-title">NEWS & EVENTS</h2>
@@ -443,7 +404,7 @@ const HomePage = () => {
       <div className="news-card">
         <div className="news-image">
           <img 
-            src="/images/image1.jpg" 
+            src="/images/artimage.jpg" 
             alt="Community Workshop"
             onError={(e) => {
               e.target.style.display = 'none';
@@ -455,20 +416,22 @@ const HomePage = () => {
           </div>
           <div className="news-date">
             <span className="date-day">15</span>
-            <span className="date-month">NOV</span>
+            <span className="date-month">JAN,2026</span>
           </div>
         </div>
         <div className="news-content">
-          <h3 className="news-card-title">Menstrual Health Workshop</h3>
+          <h3 className="news-card-title">Art For Future</h3>
           <p className="news-card-excerpt">
-            Join us for an interactive workshop on menstrual health education and sustainable practices 
-            in local communities. Learn, share, and empower together.
+            Empowering young students with disabilities by equipping them with drawing and creative art skills — building confidence, self-reliance, and economic potential through creativity.
+
           </p>
           <div className="news-meta">
             <span className="news-location">📍 Dar es Salaam</span>
             <span className="news-time">🕒 10:00 AM</span>
           </div>
-          <button className="news-btn">Read More</button>
+          <Link to="/events">
+            <button className="news-btn">Read More</button>
+          </Link>
         </div>
       </div>
 
@@ -476,7 +439,7 @@ const HomePage = () => {
       <div className="news-card">
         <div className="news-image">
           <img 
-            src="/images/image2.jpg" 
+            src="/images/hedhiS1image9.jpg" 
             alt="Product Distribution"
             onError={(e) => {
               e.target.style.display = 'none';
@@ -487,21 +450,22 @@ const HomePage = () => {
             Distribution Image
           </div>
           <div className="news-date">
-            <span className="date-day">22</span>
-            <span className="date-month">NOV</span>
+            <span className="date-day">28</span>
+            <span className="date-month">MAY</span>
           </div>
         </div>
         <div className="news-content">
-          <h3 className="news-card-title">Hygiene Kit Distribution</h3>
+          <h3 className="news-card-title">Menstrual Health Summit</h3>
           <p className="news-card-excerpt">
-            We're distributing essential menstrual hygiene kits to underserved communities. 
-            Your support makes this possible. Together we break the stigma.
+            A national gathering that will bring together all stakeholders in menstrual health management (MHM) — from NGOs and schools to government bodies and corporate partners — to discuss, learn, and design sustainable menstrual health solutions.
           </p>
           <div className="news-meta">
             <span className="news-location">📍 Arusha</span>
             <span className="news-time">🕒 9:00 AM</span>
           </div>
-          <button className="news-btn">Read More</button>
+          <Link to="/events">
+            <button className="news-btn">Read More</button>
+          </Link>
         </div>
       </div>
 
@@ -509,7 +473,7 @@ const HomePage = () => {
       <div className="news-card">
         <div className="news-image">
           <img 
-            src="/images/program1.jpg" 
+            src="/images/wings.jpg" 
             alt="Youth Training"
             onError={(e) => {
               e.target.style.display = 'none';
@@ -521,20 +485,21 @@ const HomePage = () => {
           </div>
           <div className="news-date">
             <span className="date-day">05</span>
-            <span className="date-month">DEC</span>
+            <span className="date-month">SEPT,2026</span>
           </div>
         </div>
         <div className="news-content">
-          <h3 className="news-card-title">Youth Advocacy Training</h3>
+          <h3 className="news-card-title">Wings Of Compassion</h3>
           <p className="news-card-excerpt">
-            Empowering young leaders with advocacy skills to champion menstrual health in their 
-            communities. Be the change you want to see.
+            Continuing our flagship program promoting SRHR, mental health awareness, and youth empowerment through education, sports, and art-based advocacy across schools in Tanzania.
           </p>
           <div className="news-meta">
             <span className="news-location">📍 Mwanza</span>
             <span className="news-time">🕒 2:00 PM</span>
           </div>
-          <button className="news-btn">Read More</button>
+          <Link to="/events">
+            <button className="news-btn">Read More</button>
+          </Link>
         </div>
       </div>
     </div>
@@ -543,11 +508,11 @@ const HomePage = () => {
       <button className="view-all-btn">View All News & Events</button>
     </div>
   </div>
-</section>
+      </section>
 
 
 {/* Testimonials Section */}
-<section className="testimonials-section">
+      <section className="testimonials-section">
   <div className="container">
     <div className="testimonials-header">
       <h2 className="testimonials-title">Testimonials</h2>
@@ -615,106 +580,11 @@ const HomePage = () => {
       </div>
     </div>
   </div>
-</section>
+      </section>
 
 
-{/* Footer Section */}
-<footer className="footer-section">
-  <div className="container">
-    <div className="footer-content">
-      {/* Section 1: Logo and Description */}
-      <div className="footer-column">
-        <div className="footer-logo">
-          <img 
-            src="/images/doekmanlogo1.png" 
-            alt="Dockman Foundation"
-            onError={(e) => {
-              e.target.style.display = 'none';
-              e.target.nextSibling.style.display = 'flex';
-            }}
-          />
-          <div className="logo-fallback">
-            <span className="logo-main">DOCKMAN</span>
-            <span className="logo-sub">FOUNDATION</span>
-          </div>
-        </div>
-        <p className="footer-description">
-          Dockman Foundation is a non-profit organization that addresses community issues 
-          by taking care of the environment, protecting the health of the community, and 
-          adapting to climate change.
-        </p>
-      </div>
-
-      {/* Section 2: Links */}
-      <div className="footer-column">
-        <h3 className="footer-heading">Quick Links</h3>
-        <ul className="footer-links">
-          <li><a href="#home" className="footer-link">Home</a></li>
-          <li><a href="#about" className="footer-link">About Us</a></li>
-          <li><a href="#events" className="footer-link">Events</a></li>
-          <li><a href="#programs" className="footer-link">Programs</a></li>
-          <li><a href="#donation" className="footer-link">Donation</a></li>
-        </ul>
-      </div>
-
-      {/* Section 3: Contact Info */}
-      <div className="footer-column">
-        <h3 className="footer-heading">Contact Us</h3>
-        <div className="contact-info">
-          <div className="contact-item">
-            <span className="contact-icon">📍</span>
-            <span className="contact-text">Mabibo Mwisho, Dar es Salaam</span>
-          </div>
-          <div className="contact-item">
-            <span className="contact-icon">📞</span>
-            <span className="contact-text">+255 764 488 365</span>
-          </div>
-          <div className="contact-item">
-            <span className="contact-icon">✉️</span>
-            <span className="contact-text">kaganderyma@gmail.com</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Section 4: Social Media */}
-      <div className="footer-column">
-        <h3 className="footer-heading">Follow Us</h3>
-        <div className="social-icons">
-          <a href="https://instagram.com/doekmanfoundation" className="social-link" target="_blank" rel="noopener noreferrer">
-            <span className="social-icon">📷</span>
-          </a>
-          <a href="https://linked.com/doekmanfoundation" className="social-link" target="_blank" rel="noopener noreferrer">
-            <span className="social-icon">💼</span>
-          </a> 
-          {/* <a href="https://facebook.com/doekmanfoundation" className="social-link" target="_blank" rel="noopener noreferrer">
-            <span className="social-icon">📘</span>
-          </a> */}
-          <a href="https://wa.me/255764488365" className="social-link" target="_blank" rel="noopener noreferrer">
-            <span className="social-icon">💬</span>
-          </a>
-          {/* <a href="mailto:kaganderyma@gmail.com" className="social-link">
-            <span className="social-icon">📧</span>
-          </a> */}
-        </div>
-      </div>
-    </div>
-
-    {/* Footer Bottom */}
-    <div className="footer-bottom">
-      <div className="footer-bottom-content">
-        <div className="copyright">
-          © 2025 Doekman Foundation. All rights reserved.
-        </div>
-        <div className="footer-legal">
-          <a href="/privacy" className="legal-link">Privacy</a>
-          <a href="/security" className="legal-link">Security</a>
-          <a href="/terms" className="legal-link">Terms</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-    </div>
+      <Footer />
+    `</div>
   );
 };
 

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './AboutPage.css';
+import Footer from './Footer';
+import Navbar from './Navbar'; 
 
 const AboutPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,54 +79,7 @@ const AboutPage = () => {
 
   return (
     <div className="aboutpage">
-      {/* Navbar */}
-      <nav className="navbar">
-        <div className="nav-container">
-          <div className="nav-logo">
-            <div className="logo-text">
-              <span className="logo-main">DOEKMAN</span>
-              <span className="logo-sub">FOUNDATION</span>
-            </div>
-          </div>
-
-          <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-            <a 
-              href="/" 
-              className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}
-              onClick={() => handleLinkClick('home')}
-            >
-              Home
-            </a>
-            <a 
-              href="#about" 
-              className={`nav-link ${activeLink === 'about' ? 'active' : ''}`}
-              onClick={() => handleLinkClick('about')}
-            >
-              About
-            </a>
-            <a 
-              href="#programs" 
-              className={`nav-link ${activeLink === 'programs' ? 'active' : ''}`}
-              onClick={() => handleLinkClick('programs')}
-            >
-              Programs
-            </a>
-          </div>
-
-          <div className="nav-actions">
-            <button className="donate-btn">
-              Donate
-            </button>
-          </div>
-
-          <div className="nav-toggle" onClick={toggleMenu}>
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
-          </div>
-        </div>
-      </nav>
-
+      <Navbar />
       {/* Hero Section with Animated Text */}
       <section className="about-hero">
         <div className="about-hero-background">
@@ -317,91 +273,111 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer-section">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-column">
-              <div className="footer-logo">
-                <img 
-                  src="/images/doekmanlogo1.png" 
-                  alt="Doekman Foundation"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div className="logo-fallback">
-                  <span className="logo-main">DOEKMAN</span>
-                  <span className="logo-sub">FOUNDATION</span>
-                </div>
-              </div>
-              <p className="footer-description">
-                Dockman Foundation is a non-profit organization that addresses community issues 
-                by taking care of the environment, protecting the health of the community, and 
-                adapting to climate change.
-              </p>
-            </div>
+<section className="partners-section">
+  <div className="partners-background">
+    <div className="partners-overlay"></div>
+  </div>
+  <div className="container">
+    <div className="partners-header">
+      <h2 className="section-title">Our Partners</h2>
+      <p className="partners-subtitle">
+        Collaborating with organizations that share our vision for menstrual health and community empowerment
+      </p>
+    </div>
+    <div className="partners-grid">
+      <div className="partner-logo">
+        <img src="/images/akmremovebg.png" alt="Partner 1" />
+      </div>
+      <div className="partner-logo">
+        <img src="/images/aznasremovebg.png" alt="Partner 2" />
+      </div>
+      <div className="partner-logo">
+        <img src="/images/logo3removebg.png" alt="Partner 3" />
+      </div>
+      <div className="partner-logo">
+        <img src="/images/logo6removebg.png" alt="Partner 4" />
+      </div>
+      <div className="partner-logo">
+        <img src="/images/logo7removebg.png" alt="Partner 5" />
+      </div>
+      <div className="partner-logo">
+        <img src="/images/logo8removebg.png" alt="Partner 6" />
+      </div>
+      <div className="partner-logo">
+        <img src="/images/tumainremovebg.png" alt="Partner 7" />
+      </div>
+      <div className="partner-logo">
+        <img src="/images/printremovebg.png" alt="Partner 8" />
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div className="footer-column">
-              <h3 className="footer-heading">Quick Links</h3>
-              <ul className="footer-links">
-                <li><a href="/" className="footer-link">Home</a></li>
-                <li><a href="#about" className="footer-link">About Us</a></li>
-                <li><a href="#events" className="footer-link">Events</a></li>
-                <li><a href="#programs" className="footer-link">Programs</a></li>
-                <li><a href="#donation" className="footer-link">Donation</a></li>
-              </ul>
-            </div>
 
-            <div className="footer-column">
-              <h3 className="footer-heading">Contact Us</h3>
-              <div className="contact-info">
-                <div className="contact-item">
-                  <span className="contact-icon">📍</span>
-                  <span className="contact-text">Mabibo Mwisho, Dar es Salaam</span>
-                </div>
-                <div className="contact-item">
-                  <span className="contact-icon">📞</span>
-                  <span className="contact-text">+255 764 488 365</span>
-                </div>
-                <div className="contact-item">
-                  <span className="contact-icon">✉️</span>
-                  <span className="contact-text">kaganderyma@gmail.com</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="footer-column">
-              <h3 className="footer-heading">Follow Us</h3>
-              <div className="social-icons">
-                <a href="https://instagram.com/doekmanfoundation" className="social-link" target="_blank" rel="noopener noreferrer">
-                  <span className="social-icon">📷</span>
-                </a>
-                <a href="https://linked.com/doekmanfoundation" className="social-link" target="_blank" rel="noopener noreferrer">
-                  <span className="social-icon">💼</span>
-                </a>
-                <a href="https://wa.me/255764488365" className="social-link" target="_blank" rel="noopener noreferrer">
-                  <span className="social-icon">💬</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="footer-bottom">
-            <div className="footer-bottom-content">
-              <div className="copyright">
-                © 2025 Doekman Foundation. All rights reserved.
-              </div>
-              <div className="footer-legal">
-                <a href="/privacy" className="legal-link">Privacy</a>
-                <a href="/security" className="legal-link">Security</a>
-                <a href="/terms" className="legal-link">Terms</a>
-              </div>
-            </div>
+<section className="timeline-section">
+  <div className="container">
+    <div className="timeline-header">
+      <h2 className="section-title">Our Journey</h2>
+      <p className="timeline-subtitle">
+        From a simple idea to a growing movement for menstrual health awareness
+      </p>
+    </div>
+    <div className="timeline">
+      <div className="timeline-line"></div>
+      
+      {/* Timeline Item 1 */}
+      <div className="timeline-item left">
+        <div className="timeline-content">
+          <div className="timeline-year">2022 – 2023</div>
+          <div className="timeline-text">
+            Lewis Libent Kagande identified challenges faced by women and girls during menstruation, 
+            including stigma and lack of education. This inspired initiatives for education and awareness.
           </div>
         </div>
-      </footer>
+        <div className="timeline-dot"></div>
+      </div>
+
+      {/* Timeline Item 2 */}
+      <div className="timeline-item right">
+        <div className="timeline-content">
+          <div className="timeline-year">2023 – 2024</div>
+          <div className="timeline-text">
+            Officially registered as an NGO and launched Hedhi Salama Tour campaign, visiting schools 
+            and communities to provide menstrual health and mental well-being education.
+          </div>
+        </div>
+        <div className="timeline-dot"></div>
+      </div>
+
+      {/* Timeline Item 3 */}
+      <div className="timeline-item left">
+        <div className="timeline-content">
+          <div className="timeline-year">2024 – 2025</div>
+          <div className="timeline-text">
+            Expanded scope to focus on three main areas: Sexual and Reproductive Health, Mental Health, 
+            and Youth Empowerment. Enhanced collaborations with organizations and institutions.
+          </div>
+        </div>
+        <div className="timeline-dot"></div>
+      </div>
+
+      {/* Timeline Item 4 */}
+      <div className="timeline-item right">
+        <div className="timeline-content">
+          <div className="timeline-year">2025 – Present</div>
+          <div className="timeline-text">
+            In a two-year transition period focusing on structural development and program strengthening 
+            to become a leading force in SRH, Mental Health, and Youth Empowerment in Tanzania.
+          </div>
+        </div>
+        <div className="timeline-dot"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<Footer />
     </div>
   );
 };

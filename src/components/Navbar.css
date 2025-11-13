@@ -1,0 +1,257 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  height: 70px; 
+  display: flex;
+  align-items: center;
+  overflow: visible; 
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  height: 100%;
+  overflow: visible;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-image {
+  height: 120px; 
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-top: -15px;    
+  margin-bottom: -15px;
+  transform: scale(3.8);
+  transform-origin: center;
+}
+
+
+.logo-image.extra-large {
+  height: 150px;
+  margin-top: -25px;
+  margin-bottom: -25px;
+  transform: scale(1.3);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-main {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #003360;
+  letter-spacing: 0.5px;
+}
+
+.logo-sub {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #E6931B;
+  letter-spacing: 1.5px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex: 1;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #333;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #E6931B;
+}
+
+.nav-link.active {
+  color: #E6931B;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #E6931B;
+  border-radius: 1px;
+}
+
+/* Join Button */
+.nav-actions {
+  flex-shrink: 0;
+}
+
+.join-btn {
+  background: #E6931B;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.join-btn:hover {
+  background: #d48515;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 147, 27, 0.3);
+}
+
+/* Mobile Menu Toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.bar {
+  width: 25px;
+  height: 2.5px;
+  background: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 70px; 
+  }
+  
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding: 2rem 0;
+    gap: 2rem;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  
+  .logo-image {
+    height: 100px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    transform: scale(1.1);
+  }
+
+  .logo-main {
+    font-size: 1.4rem;
+  }
+
+  .logo-sub {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    height: 65px;
+  }
+  
+  .nav-container {
+    padding: 0 0.75rem;
+  }
+
+  .logo-image {
+    height: 90px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+    transform: scale(1);
+  }
+
+  .logo-main {
+    font-size: 1.2rem;
+  }
+
+  .logo-sub {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+  
+  .nav-menu {
+    top: 65px; 
+  }
+}
+
+
+.nav-toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
