@@ -99,14 +99,14 @@ const HomePage = () => {
         <div className="hero-container">
           {/* Left side - Text content on background */}
           <div className="hero-content">
-            <h1 className="hero-title">
-              Empowering Youth Through Menstrual Health Awareness
+            <h1 className="heros-title">
+              Empowering Youth Through For a Better Tomorrow
             </h1>
-            <p className="hero-description">
+            <p className="heros-description">
               Creating awareness, breaking the stigma, and supporting young people through education and resources.
             </p>
             <Link to="/about">
-              <button className="hero-btn">Learn More</button>
+              <button className="heros-btn">Learn More</button>
             </Link>
           </div>
 
@@ -415,7 +415,7 @@ const HomePage = () => {
             Workshop Image
           </div>
           <div className="news-date">
-            <span className="date-day">15</span>
+            {/* <span className="date-day">15</span> */}
             <span className="date-month">JAN,2026</span>
           </div>
         </div>
@@ -450,7 +450,7 @@ const HomePage = () => {
             Distribution Image
           </div>
           <div className="news-date">
-            <span className="date-day">28</span>
+            {/* <span className="date-day">28</span> */}
             <span className="date-month">MAY</span>
           </div>
         </div>
@@ -464,7 +464,7 @@ const HomePage = () => {
             <span className="news-time">🕒 9:00 AM</span>
           </div>
           <Link to="/events">
-            <button className="news-btn">Read More</button>
+          <button className="news-btn">Read More</button>
           </Link>
         </div>
       </div>
@@ -484,7 +484,7 @@ const HomePage = () => {
             Training Image
           </div>
           <div className="news-date">
-            <span className="date-day">05</span>
+            {/* <span className="date-day">05</span> */}
             <span className="date-month">SEPT,2026</span>
           </div>
         </div>

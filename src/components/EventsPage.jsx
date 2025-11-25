@@ -40,7 +40,7 @@ const EventsPage = () => {
         "/images/hedhiS1image9.jpg",
         "/images/hedhiS1image10.jpg"
       ],
-      date: "March 2024",
+      date: "December 2024",
       location: "Dar es Salaam",
       impact: "5,000+ students reached"
     },
@@ -155,7 +155,7 @@ const EventsPage = () => {
           <div className="upcoming-events-grid">
             <div className="upcoming-event-card">
               <div className="event-date">
-                <span className="date-day">15</span>
+                {/* <span className="date-day">15</span> */}
                 <span className="date-month">JAN,2026</span>
               </div>
               <div className="event-content">
@@ -174,7 +174,7 @@ const EventsPage = () => {
 
             <div className="upcoming-event-card">
               <div className="event-date">
-                <span className="date-day">28</span>
+                {/* <span className="date-day">28</span> */}
                 <span className="date-month">MAY,2026</span>
               </div>
               <div className="event-content">
@@ -193,7 +193,7 @@ const EventsPage = () => {
 
             <div className="upcoming-event-card">
               <div className="event-date">
-                <span className="date-day">05</span>
+                {/* <span className="date-day">05</span> */}
                 <span className="date-month">SEPT, 2026</span>
               </div>
               <div className="event-content">

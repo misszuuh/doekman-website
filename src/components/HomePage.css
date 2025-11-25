@@ -80,29 +80,33 @@ button {
 /* Hero Content - Left Side */
 .hero-content {
   color: white;
-  padding-right: 2rem;
+  padding-right: 1rem;
   position: relative;
   z-index: 1;
   justify-self: start;
   max-width: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* This should stack items vertically */
+  align-items: flex-start; /* Align items to the left */
+  gap: 1rem; /* Consistent spacing between items */
 }
 
-.hero-title {
-  font-size: 2.8rem;
+
+.heros-title {
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0; /* Remove bottom margin since gap handles spacing */
 }
-
-.hero-description {
+.heros-description {
   font-size: 1.2rem;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 0; /* Remove bottom margin since gap handles spacing */
   opacity: 0.9;
   max-width: 500px;
 }
-
-.hero-btn {
+.heros-btn {
   background: #E6931B;
   color: white;
   border: none;
@@ -114,7 +118,7 @@ button {
   transition: all 0.3s ease;
 }
 
-.hero-btn:hover {
+.heros-btn:hover {
   background: #d48515;
   transform: translateY(-2px);
 }

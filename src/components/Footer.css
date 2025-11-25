@@ -20,6 +20,10 @@
   z-index: 1;
 }
 
+.contact-heading {
+  color: #ffffff !important;
+}
+
 .footer-content {
   display: grid;
   grid-template-columns: 2.2fr 1fr 1.2fr 1fr;

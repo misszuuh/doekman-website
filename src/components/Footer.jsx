@@ -40,13 +40,13 @@ const Footer = () => {
           </div>
 
           {/* Section 3: Contact Info - SIMPLE LIST */}
-          <div className="footer-column">
-            <h3 className="footer-heading">Contact Us</h3>
+          <div className="footer-column contact-column">
+            <h3 className="footer-heading contact-heading">Contact Us</h3>
             <div className="contact-info">
-              <div className="contact-line">Mabibo Mwisho, Dar es Salaam</div>
+              <div className="contact-line">Dar es Salaam</div>
               <div className="contact-line">+255 764 488 365</div>
-              <div className="contact-line">kaganderyna@gmail.com</div>
-              <div className="contact-line">00NGO/R/7377</div>
+              <div className="contact-line">doekmanfoundation1@gmail.com</div>
+              {/* <div className="contact-line">00NGO/R/7377</div> */}
             </div>
           </div>
 
@@ -81,7 +81,7 @@ const Footer = () => {
                 />
               </a>
               <a 
-                href="https://chat.whatsapp.com/FEBilxtHohW866nWuatHwu?mode=wwt" 
+                href="https://wa.me/message/HP2UFDBWVDJIL1" 
                 className="social-link" 
                 target="_blank" 
                 rel="noopener noreferrer"
