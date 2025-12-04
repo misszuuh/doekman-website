@@ -117,7 +117,8 @@ const AboutPage = () => {
                 dedicated to advancing menstrual health awareness and support for underprivileged communities. 
                 Registered under Tanzanian law <span className="highlight">(Registration No: 00NGO/R/7377)</span>, 
                 the foundation recognizes menstrual hygiene as a fundamental public health issue. 
-                Through sexual reproductive health, mental health, youth empowering, advocacy, education, and strategic partnerships, Doekman Foundation is committed 
+                Through sexual reproductive health, mental health, youth empowering,
+                 advocacy, education, and strategic partnerships, Doekman Foundation is committed 
                 to empowering communities, eliminating menstrual stigma, and ensuring access to essential 
                 hygiene resources for all.
               </p>

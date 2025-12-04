@@ -99,15 +99,17 @@ const HomePage = () => {
         <div className="hero-container">
           {/* Left side - Text content on background */}
           <div className="hero-content">
-            <h1 className="heros-title">
-              Empowering Youth Through For a Better Tomorrow
-            </h1>
-            <p className="heros-description">
-              Creating awareness, breaking the stigma, and supporting young people through education and resources.
-            </p>
-            <Link to="/about">
-              <button className="heros-btn">Learn More</button>
-            </Link>
+            <div className="hero-text-wrapper">
+              <h1 className="heros-title">
+                Empowering Youth Through For a Better Tomorrow
+              </h1>
+              <p className="heros-description">
+                Creating awareness, breaking the stigma, and supporting young people through education and resources.
+              </p>
+              <Link to="/about">
+                <button className="heros-btn">Learn More</button>
+              </Link>
+            </div>
           </div>
 
           {/* Right side - Orange card with image overlapping */}
