@@ -160,11 +160,11 @@ button {
 
 .card-image {
   position: absolute;
-  left: -10%;
+  left: -22%;
   top: 50%;
   transform: translateY(-50%);
-  width: 90%;
-  height: 80%;
+  width: 118%;
+  height: 85%;
   object-fit: cover;
   object-position: center;
   border-radius: 20px;
@@ -174,10 +174,10 @@ button {
 
 .image-fallback {
   position: absolute;
-  left: -5%;
+  left: -22%;
   top: 50%;
   transform: translateY(-50%);
-  width: 90%;
+  width: 115%;
   height: 100%;
   background: linear-gradient(45deg, #ff9d00, #ff6b00);
   border-radius: 20px;
