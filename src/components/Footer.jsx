@@ -68,7 +68,7 @@ const Footer = () => {
                 />
               </a>
               <a 
-                href="https://linkedin.com/company/doekmanfoundation" 
+                href="https://www.linkedin.com/company/doekman-foundation/" 
                 className="social-link" 
                 target="_blank" 
                 rel="noopener noreferrer"
