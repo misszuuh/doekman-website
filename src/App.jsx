@@ -6,6 +6,7 @@ import ProgramsPage from './components/ProgramsPage';
 import EventsPage from './components/EventsPage';
 import JoinPage from "./components/JoinPage";
 import TermsPage from "./components/TermsPage";
+import ScrollToTop from './components/ScrollToTop';
 
 import './App.css';
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />

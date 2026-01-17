@@ -299,10 +299,10 @@ const AboutPage = () => {
         <img src="/images/logo6removebg.png" alt="Partner 4" />
       </div>
       <div className="partner-logo">
-        <img src="/images/logo7removebg.png" alt="Partner 5" />
+        <img src="/images/360 logo.png" alt="Partner 5" />
       </div>
       <div className="partner-logo">
-        <img src="/images/logo8removebg.png" alt="Partner 6" />
+        <img src="/images/jorafra11.png" alt="Partner 6" />
       </div>
       <div className="partner-logo">
         <img src="/images/tumainremovebg.png" alt="Partner 7" />

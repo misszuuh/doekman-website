@@ -92,15 +92,15 @@ const JoinPage = () => {
               </p>
               <div className="hero-stats">
                 <div className="stat">
-                  <span className="stat-number">500+</span>
+                  <span className="stat-number">100+</span>
                   <span className="stat-label">Active Members</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">50+</span>
+                  <span className="stat-number">500+</span>
                   <span className="stat-label">Communities Reached</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">10,000+</span>
+                  <span className="stat-number">5000+</span>
                   <span className="stat-label">Lives Impacted</span>
                 </div>
               </div>

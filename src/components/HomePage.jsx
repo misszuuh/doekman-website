@@ -101,10 +101,10 @@ const HomePage = () => {
           <div className="hero-content">
             <div className="hero-text-wrapper">
               <h1 className="heros-title">
-                Empowering Youth Through For a Better Tomorrow
+                Empowering Youth For a Better Tomorrow
               </h1>
               <p className="heros-description">
-                Creating awareness, breaking the stigma, and supporting young people through education and resources.
+                Creating awareness on Sexual Reproductive Health (SRH), Mental Health and Youth Empowerment.
               </p>
               <Link to="/about">
                 <button className="heros-btn">Learn More</button>
@@ -272,14 +272,14 @@ const HomePage = () => {
 
             {/* Collaborators */}
             <div className="stat-item">
-              <div className="stat-number" data-count="200">0</div>
+              <div className="stat-number" data-count="20">0</div>
               <div className="stat-label">Collaborators</div>
               <div className="stat-icon">🤝</div>
             </div>
 
             {/* Donation */}
             <div className="stat-item">
-              <div className="stat-number" data-count="650">0</div>
+              <div className="stat-number" data-count="100">0</div>
               <div className="stat-label">Donation</div>
               <div className="stat-icon">💰</div>
             </div>

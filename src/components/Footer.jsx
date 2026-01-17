@@ -21,9 +21,9 @@ const Footer = () => {
               />
             </div>
             <p className="footer-description">
-              Doekman Foundation is a youth-led non-profit organization dedicated to advancing 
-              menstrual health awareness, breaking stigma, and empowering communities through 
-              education, sustainable practices, and comprehensive support programs across Tanzania.
+              Doekman Foundation is a youth-led non-profit organization dedicated to creating awareness on Sexual Reproductive Health (SRH)
+              and advancing menstrual health awareness, breaking stigma, and empowering communities through education, sustainable practices, 
+              and comprehensive support programs across Tanzania.
             </p>
           </div>
 

@@ -161,11 +161,11 @@ const EventsPage = () => {
               <div className="event-content">
                 <h3 className="event-title">Art For Future</h3>
                 <p className="event-description">
-                  Empowering young students with disabilities by equipping them with drawing and creative art skills — building confidence, self-reliance, and economic potential through creativity.
+                  Empowering young students with disabilities by equipping them with drawing and creative art skills building confidence, self-reliance, and economic potential through creativity.
 
                 </p>
                 <div className="event-meta">
-                  <span className="event-location">📍 Dar es Salaam Schools</span>
+                  <span className="event-location">📍 Dar es Salaam (Matumaini Orphanage Center)</span>
                   <span className="event-time">🕒 9:00 AM</span>
                 </div>
                 <button className="event-btn">Register Interest</button>
@@ -180,11 +180,11 @@ const EventsPage = () => {
               <div className="event-content">
                 <h3 className="event-title">Menstrual Health Summit</h3>
                 <p className="event-description">
-                  A national gathering that will bring together all stakeholders in menstrual health management (MHM) — from NGOs and schools to government bodies and corporate partners — to discuss, learn, and design sustainable menstrual health solutions.
+                  A national gathering that will bring together all stakeholders in menstrual health management (MHM) from NGOs and schools to government bodies and corporate partners to discuss, learn, and design sustainable menstrual health solutions.
 .
                 </p>
                 <div className="event-meta">
-                  <span className="event-location">📍 Community Center</span>
+                  <span className="event-location">📍 Dar es salaam (UDSM New Library)</span>
                   <span className="event-time">🕒 2:00 PM</span>
                 </div>
                 <button className="event-btn">Register Interest</button>
@@ -202,7 +202,7 @@ const EventsPage = () => {
                   Continuing our flagship program promoting SRHR, mental health awareness, and youth empowerment through education, sports, and art-based advocacy across schools in Tanzania.
                 </p>
                 <div className="event-meta">
-                  <span className="event-location">📍 City Park</span>
+                  <span className="event-location">📍 Dar es salaam (Ubungo)</span>
                   <span className="event-time">🕒 8:00 AM</span>
                 </div>
                 <button className="event-btn">Register Interest</button>
